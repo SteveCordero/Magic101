@@ -41,5 +41,7 @@ public class MagicDriver
        System.out.println(goldy.toString());
        goldy.validate();
        faker.validate();
+
+       System.out.println("Hello");
    }
 }//end driver
