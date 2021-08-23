@@ -45,7 +45,7 @@ public class Golem extends Enemies
                 System.out.println("This Golem is of the Earth Element");
                 break;
             case AIR:
-                System.out.println("This Golem is of the AIR ELEMENT");
+                System.out.println("This Golem is of the Air ELEMENT");
                 break;
             default:
                 System.out.println("That is not a valid golem element");

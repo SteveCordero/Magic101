@@ -55,7 +55,23 @@ public class Sorcerer
     {
         health -= enemy.getAttackDmg();
         //note to self, the enemy cannot die as for right now
-        System.out.println("The enemy has hit you for ");
+        System.out.println("\n"+ enemy.getName() + " The " + enemy.getEnemyType() + " has hit you for "
+                            + enemy.getAttackDmg() + " damage");
+        switch(enemy.getEnemyType())
+        {
+            case GOBLIN:
+                System.out.println("You hit " + enemy.getName() + " the Goblin for " + dmgToGoblin
+                + " damage");
+                break;
+            case DRAGON:
+                System.out.println("You hit " + enemy.getName() + " the Dragon for " + dmgToDragon
+                        + " damage");
+                break;
+            case GOLEM:
+                System.out.println("You hit " + enemy.getName() + " the Golem for " + dmgToGolem
+                        + " damage");
+                break;
+        }
     }//end brain method to inflict damage onto the enemies and vice versa
 
     public void healingPotion()

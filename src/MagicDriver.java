@@ -16,6 +16,7 @@ public class MagicDriver
        Golem goldy = new Golem("Goldy",false,7,EnemyType.GOLEM, Elements.FIRE);
        Golem faker = new Golem("Faker",false,4,EnemyType.GOLEM, Elements.FAKE);
 
+       Sorcerer waldo = new Sorcerer(100,5,10,3);
 
        System.out.println(kyle.toString());
 
@@ -42,6 +43,12 @@ public class MagicDriver
        goldy.validate();
        faker.validate();
 
-       
+       waldo.exchangeAttacks(gerome);
+       System.out.println(waldo.getHealth());
+       waldo.exchangeAttacks(geraldo);
+       System.out.println(waldo.getHealth());
+       waldo.exchangeAttacks(goldy);
+       System.out.println(waldo.getHealth());
+
    }
 }//end driver

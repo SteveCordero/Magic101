@@ -11,7 +11,7 @@ public abstract class Enemies
     private String name;
     private boolean hasClaws;
     private int attackDmg;
-    private  EnemyType enemyType;
+    private EnemyType enemyType;
 
     //Constructor
     public Enemies(String name, boolean hasClaws,int attackDmg,EnemyType enemyType)
@@ -36,6 +36,10 @@ public abstract class Enemies
         return name;
     }
 
+    public EnemyType getEnemyType() {
+        return enemyType;
+    }
+
     public void setHasClaws(boolean hasClaws) {
         this.hasClaws = hasClaws;
     }
@@ -46,6 +50,10 @@ public abstract class Enemies
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setEnemyType(EnemyType enemyType) {
+        this.enemyType = enemyType;
     }
 
     @Override
