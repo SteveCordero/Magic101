@@ -8,8 +8,9 @@ public class Sorcerer
     private int dmgToGolem;
 
     //Constructor
-    public Sorcerer(int health, int dmgToGoblin,int dmgToDragon, int dmgToGolem)
+    public Sorcerer(String name, int health, int dmgToGoblin,int dmgToDragon, int dmgToGolem)
     {
+        this.name = name;
         this.health = health;
         this.dmgToGoblin = dmgToGoblin;
         this.dmgToDragon = dmgToDragon;
@@ -89,5 +90,12 @@ public class Sorcerer
 
 
     //toString()
-
+    public String toString()
+    {
+        String output ="\n" + name + " the Sorcerer:"
+                + "\nDamage against Dragons: " + dmgToDragon
+                + "\nDamage against Golems: " + dmgToGolem
+                + "\nDamage against Goblines: " + dmgToGoblin;
+        return output;
+    }//end toString for the Sorcerer class
 }
