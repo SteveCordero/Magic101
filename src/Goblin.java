@@ -2,11 +2,13 @@ public class Goblin extends Enemies
 {
     //Instance Variables
     private int numClaws;
+    private static int numGoblins;
     //Constructor
     public Goblin(String name, boolean hasClaws,int attackDmg,EnemyType enemyType,int numClaws)
     {
         super(name,hasClaws,attackDmg,enemyType);
         this.numClaws = numClaws;
+        numGoblins++;
     }
 
     //Getters and Setters
@@ -29,6 +31,11 @@ public class Goblin extends Enemies
         {
             System.out.println(super.getName() + " is a real Goblin");
         }
+    }
+
+    public void displayNumGoblins()
+    {
+        System.out.println("There are " + numGoblins + " Goblins");
     }
     //ToString
     public String toString()

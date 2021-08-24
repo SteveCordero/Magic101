@@ -54,6 +54,8 @@ public class MagicDriver
        {
            System.out.println(myEnemies[i]);
        }
+       //Display how many of each enmey and sorcerers there are
+       
 
        //make the enemies battle the sorcerers
        waldo.exchangeAttacks(gerome);
@@ -65,5 +67,6 @@ public class MagicDriver
 
        System.out.println(waldo.toString());
 
+       kyle.displayNumGoblins();
    }
 }//end driver
