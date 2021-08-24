@@ -5,8 +5,7 @@ public class MagicDriver
 {
    public static void main(String[]args)
    {
-       System.out.println("Hello World");
-
+       //Create all enemy and sorcerer objects
        Goblin kyle = new Goblin("Kyle",true,2,EnemyType.GOBLIN,5);
        Goblin gerome = new Goblin("Gerome",false,3,EnemyType.GOBLIN,-1);
 
@@ -17,12 +16,38 @@ public class MagicDriver
        Golem faker = new Golem("Faker",false,4,EnemyType.GOLEM, Elements.FAKE);
 
        Sorcerer waldo = new Sorcerer("Waldo",100,5,10,3);
+       Sorcerer enigma = new Sorcerer("Enigma",100,6,4,7);
 
-       System.out.println(kyle.toString());
 
-       kyle.setNumClaws(7);
-       System.out.println("Now kyle has " + kyle.getNumClaws() + " claws.");
+       //validate each of the enemy objects
+        kyle.validate();
+        gerome.validate();
 
+       System.out.println("Is " + drago.getName()+ " a real dragon? " + drago.validate());
+       System.out.println("Is " + geraldo.getName()+ " a real dragon? " + geraldo.validate());
+
+        goldy.validate();
+        faker.validate();
+
+       System.out.println();
+
+       //fix the objects that need to be validated
+        gerome.setNumClaws(2);
+
+        geraldo.setHasClaws(true);
+
+        faker.setGolemElement(Elements.AIR);
+
+       System.out.println();
+       //validate the objects again
+        gerome.validate();
+
+       System.out.println("Is " + geraldo.getName()+ " a real dragon? " + geraldo.validate());
+
+       faker.validate();
+
+       System.out.println();
+       //print out the enemies you are facing and their toStrings
        Enemies[] myEnemies = {kyle,gerome,drago,geraldo,goldy,faker};
 
        for(int i = 0; i < myEnemies.length; i++)
@@ -30,19 +55,7 @@ public class MagicDriver
            System.out.println(myEnemies[i]);
        }
 
-
-       System.out.println(drago.toString());
-       System.out.println("is it a valid Dragon? " + drago.validate());
-
-       System.out.println(geraldo.toString());
-       System.out.println("is it a valid Dragon? " + drago.validate());
-
-
-
-       System.out.println(goldy.toString());
-       goldy.validate();
-       faker.validate();
-
+       //make the enemies battle the sorcerers
        waldo.exchangeAttacks(gerome);
        System.out.println(waldo.getHealth());
        waldo.exchangeAttacks(geraldo);

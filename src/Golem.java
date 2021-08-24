@@ -36,19 +36,19 @@ public class Golem extends Enemies
         switch(golemElement)
         {
             case FIRE:
-                System.out.println("This Golem is of the Fire Element");
+                System.out.println(super.getName() + " Golem is a valid Golem of the Fire Element");
                 break;
             case WATER:
-                System.out.println("This Golem is of the Water Element");
+                System.out.println(super.getName() + " Golem is a valid Golem of the Water Element");
                 break;
             case EARTH:
-                System.out.println("This Golem is of the Earth Element");
+                System.out.println(super.getName() + " Golem is a valid Golem of the Earth Element");
                 break;
             case AIR:
-                System.out.println("This Golem is of the Air ELEMENT");
+                System.out.println(super.getName() + " Golem is a valid Golem of the Air ELEMENT");
                 break;
             default:
-                System.out.println("That is not a valid golem element");
+                System.out.println(super.getName() + " is not a valid golem element");
                 break;
         }
     }//end method to check if the golem is a valid golem

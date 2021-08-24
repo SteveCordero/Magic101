@@ -23,7 +23,11 @@ public class Goblin extends Enemies
     {
         if(numClaws < 0 )
         {
-            System.out.println("No Goblin can have negative claws");
+            System.out.println(super.getName()+ " the Goblin can't have negative claws");
+        }
+        else
+        {
+            System.out.println(super.getName() + " is a real Goblin");
         }
     }
     //ToString
