@@ -54,8 +54,8 @@ public class MagicDriver
        {
            System.out.println(myEnemies[i]);
        }
-       //Display how many of each enmey and sorcerers there are
-       
+       //Display how many of each enemey and sorcerers there are
+
 
        //make the enemies battle the sorcerers
        waldo.exchangeAttacks(gerome);

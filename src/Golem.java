@@ -11,12 +11,14 @@ public class Golem extends Enemies
 {
     //instance variables
     private Elements golemElement;
+    private static int numGolems;
 
     //Constructors
     public Golem(String name, boolean hasClaws,int attackDmg,EnemyType enemyType, Elements golemElement)
     {
         super(name,hasClaws, attackDmg,enemyType);
         this.golemElement = golemElement;
+        numGolems++;
     }//end of full args constructor
 
     //Getters and Setters
@@ -53,6 +55,10 @@ public class Golem extends Enemies
         }
     }//end method to check if the golem is a valid golem
 
+    public void displayNumGolems()
+    {
+        System.out.println("There are " + numGolems + " Golems");
+    }
     public String toString()
     {
         String output = super.toString();

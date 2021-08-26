@@ -43,5 +43,5 @@ public class Goblin extends Enemies
         String output = super.toString();
                 output += "\nThis Goblin has " + numClaws + " claws\n";
         return output;
-    }
+    }//end toString for Goblins
 }//end Goblin Class

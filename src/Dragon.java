@@ -3,6 +3,7 @@ public class Dragon extends Enemies
     //instance variables
     private int numWings;
     private int wingLength;
+    private static int numDragons;
 
     //constructor
     public Dragon(String name, boolean hasClaws,int attackDmg,EnemyType enemyType, int numWings, int wingLength)
@@ -10,6 +11,7 @@ public class Dragon extends Enemies
         super(name,hasClaws, attackDmg,enemyType);
         this.numWings = numWings;
         this.wingLength = wingLength;
+        numDragons++;
 
     }//end full args constructor
 
@@ -57,6 +59,10 @@ public class Dragon extends Enemies
         return isDragon;
     }//end brain method to check if dragon object is a valid dragon/ the validation
 
+    public void displayNumDragons()
+    {
+        System.out.println("There are " + numDragons + " Dragons");
+    }
     //toString
     public String toString()
     {
