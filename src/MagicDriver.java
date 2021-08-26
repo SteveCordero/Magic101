@@ -55,18 +55,31 @@ public class MagicDriver
            System.out.println(myEnemies[i]);
        }
        //Display how many of each enemey and sorcerers there are
-
+       kyle.displayNumGoblins();
+       drago.displayNumDragons();
+       goldy.displayNumGolems();
 
        //make the enemies battle the sorcerers
        waldo.exchangeAttacks(gerome);
-       System.out.println(waldo.getHealth());
+       System.out.println("waldo has " + waldo.getHealth() + " health");
+       waldo.healingPotion();
+
        waldo.exchangeAttacks(geraldo);
-       System.out.println(waldo.getHealth());
+       System.out.println("waldo has " + waldo.getHealth() + " health");
+
        waldo.exchangeAttacks(goldy);
-       System.out.println(waldo.getHealth());
+       System.out.println("waldo has " + waldo.getHealth() +  " health");
+       waldo.healingPotion();
 
-       System.out.println(waldo.toString());
+       enigma.exchangeAttacks(kyle);
+       System.out.println("enimga has " + enigma.getHealth() + " health");
+       enigma.healingPotion();
 
-       kyle.displayNumGoblins();
+       enigma.exchangeAttacks(drago);
+       System.out.println("enigmas has " + enigma.getHealth() + " health");
+
+       enigma.exchangeAttacks(faker);
+       System.out.println("enigmas has " + enigma.getHealth() + " health");
+       enigma.healingPotion();
    }
 }//end driver

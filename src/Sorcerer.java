@@ -86,6 +86,7 @@ public class Sorcerer
         {
             health = 200;
         }
+        System.out.println("25 health has been healed to " +  name);
     }//end brain method to heal the sorcerer
 
 
